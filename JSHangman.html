@@ -18,7 +18,7 @@
 
 <script type="text/javascript">
 var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial"];
-var guess = "";
+var guess = [];
 var answer = wordInventory[Math.floor(Math.random()*7)];
 var guessesLeft = 10;
 var losses = 0;
@@ -26,12 +26,12 @@ var wins = 0;
 var guessHistory = [];
 //Used to display underscores
 for ( i=0; i <= (answer.length -1); i++ ){
-	guess += "_";
+	guess.push("_");
 }
 	
 	document.addEventListener("keyup", function(event) {
 		var guessedLetter = event.key;
-		var updatedGuess = "";
+		var updatedGuess = [];
 
 			//checks to see if input is in the answer or previously guessed
 			//if input is not in the answer AND it's not previously guessed subtract guess
@@ -47,9 +47,9 @@ for ( i=0; i <= (answer.length -1); i++ ){
 			//Loop and update variables if letter is correct
 			for( var i=0; i <= (answer.length-1); i++){
 				if ( guessedLetter === answer[i]){
-					updatedGuess += answer[i];
+					updatedGuess.push(answer[i]);
 				} else { 
-					updatedGuess += guess[i];
+					updatedGuess.push(guess[i]);
 				}
 			}
 			guess = updatedGuess;
@@ -64,7 +64,7 @@ for ( i=0; i <= (answer.length -1); i++ ){
 			answer = wordInventory[Math.floor(Math.random()*7)];
 			guessesLeft = 10;
 			for ( i=0; i <= (answer.length -1); i++){
-				guess += "_";
+				guess.push("_");
 			}
 			
 		}   //A win occurs add 1 to wins and reset the game
@@ -73,18 +73,18 @@ for ( i=0; i <= (answer.length -1); i++ ){
 			document.getElementById("win").innerHTML = ++wins;
 			answer = "";
 			guessHistory = [];
-			guess = "";
+			guess = [];
 			answer = wordInventory[Math.floor(Math.random()*7)];
 			guessesLeft = 10;
 			for ( i=0; i <= (answer.length -1); i++){
-				guess+= "_";
+				guess.push("_");
 			}
 		}
 		
-		document.getElementById("word").innerHTML = guess;
+		document.getElementById("word").innerHTML = guess.join(" ");
 		document.getElementById("guessesLeft").innerHTML = guessesLeft;
 	});
-	document.getElementById("word").innerHTML = guess;
+	document.getElementById("word").innerHTML = guess.join(" ");
 
 </script>
 </body>
