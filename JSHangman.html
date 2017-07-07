@@ -25,7 +25,7 @@ var losses = 0;
 var wins = 0;
 var guessHistory = [];
 //Used to display underscores
-for ( i=0; i <= (answer.length -1); i++ ){
+for (var i=0; i <= (answer.length -1); i++ ){
 	guess.push("_");
 }
 	
@@ -68,7 +68,8 @@ for ( i=0; i <= (answer.length -1); i++ ){
 			}
 			
 		}   //A win occurs add 1 to wins and reset the game
-		if (guess === answer){
+		
+		if (guess.join("") === answer){
 			console.log("Condition Successful");
 			document.getElementById("win").innerHTML = ++wins;
 			answer = "";
