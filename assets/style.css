@@ -1,0 +1,34 @@
+
+h1{
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  color: lightgrey;
+}
+
+.jumbotron {
+  max-width: 960px;
+}
+
+#content {
+  padding-left: 20%;
+}
+
+body {
+  background-image: url("bckimg.jpg");
+}
+
+#word {
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 30pt;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#msgTracker,
+#pickTracker,
+#guessTracker,
+#winsTracker,
+#lossTracker {
+  font-size: 10px;
+}

@@ -3,7 +3,7 @@
 console.log("test");
 var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial"];
 var guess = [];
-var answer = wordInventory[Math.floor(Math.random()*7)];
+var answer = wordInventory[Math.floor(Math.random()*wordInventory.length)];
 var guessesLeft = 10;
 var losses = 0;
 var wins = 0;
@@ -29,12 +29,12 @@ function resetGame(){
 		var guessedLetter = event.key;
 		var updatedGuess = [];
 
-			//checks to see if input is in the answer or previously guessed
-			//if input is not in the answer AND it's not previously guessed subtract guess
+		//checks to see if input is in the answer or previously guessed
+		//if input is not in the answer AND it's not previously guessed subtract guess
 		if ( answer.indexOf(event.key) < 0 && guessHistory.indexOf(event.key) < 0){
 			guessesLeft--;
 		}
-		    // Puts the input into the array guessHistory
+		// Puts the input into the array guessHistory
 		guessHistory.push(event.key);
 		document.getElementById("guessholder").innerHTML = guessHistory;
 
@@ -55,27 +55,12 @@ function resetGame(){
 		if (guessesLeft == 0){
 			document.getElementById("losses").innerHTML = ++losses;
       resetGame();
-			/*answer = "";
-			guessHistory = [];
-			guess ="";
-			answer = wordInventory[Math.floor(Math.random()*7)];
-			guessesLeft = 10;
-			for ( i=0; i <= (answer.length -1); i++){
-				guess.push("_");*/
 			}
 
     //A win occurs add 1 to wins and reset the game
 		if (guess.join("") === answer){
 			document.getElementById("win").innerHTML = ++wins;
       resetGame();
-			/*answer = "";
-			guessHistory = [];
-			guess = [];
-			answer = wordInventory[Math.floor(Math.random()*7)];
-			guessesLeft = 10;
-			for ( i=0; i <= (answer.length -1); i++){
-				guess.push("_");
-			}*/
 		}
 
 		document.getElementById("word").innerHTML = guess.join(" ");

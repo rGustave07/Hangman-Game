@@ -2,18 +2,35 @@
 <html>
 <head>
 	<title></title>
+	<!-- Linking GoogleFonts -->
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<!-- Linking Bootstrap!!! -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Linking CSS File -->
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<!-- Linking Javascript -->
 	<script src="assets/logic.js" text="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-	<h1>Hangman game</h1>
-	<div id="wrapper">
-	<div id="gamediv"></div>
-	<div id="word"></div>
-	<p>Pick a letter on your keyboard and guess what the word is.</p>
-	<p>You've picked: <span id="guessholder">press a key to start!</span></p>
-	<p>Amount of guesses left: <span id="guessesLeft">10</span></p>
-	<p>Wins: <span id="win">0</span></p>
-	<p>Losses: <span id="losses">0</span></p>
+
+	<div id="gmTitle" class="row">
+		<div class="col-md-12">
+			<h1>Hangman game</h1>
+		</div>
+	</div>
+
+	<div id="content" class="row">
+		<div class="jumbotron center">
+			<div class="container">
+					<div id="gamediv"></div>
+					<div id="word"></div>
+					<p id="msgTracker">Pick a letter on your keyboard and guess what the word is.</p>
+					<p id="pickTracker">You've picked: <span id="guessholder">press a key to start!</span></p>
+					<p id="guessTracker">Amount of guesses left: <span id="guessesLeft">10</span></p>
+					<p id="winsTracker">Wins: <span id="win">0</span></p>
+					<p id="lossTracker">Losses: <span id="losses">0</span></p>
+			</div>
+		</div>
 	</div>
 
 
