@@ -66,16 +66,16 @@ function resetGame(){
 
     //A win occurs add 1 to wins and reset the game
 		if (guess.join("") === answer){
-			console.log("Condition Successful");
 			document.getElementById("win").innerHTML = ++wins;
-			answer = "";
+      resetGame();
+			/*answer = "";
 			guessHistory = [];
 			guess = [];
 			answer = wordInventory[Math.floor(Math.random()*7)];
 			guessesLeft = 10;
 			for ( i=0; i <= (answer.length -1); i++){
 				guess.push("_");
-			}
+			}*/
 		}
 
 		document.getElementById("word").innerHTML = guess.join(" ");
