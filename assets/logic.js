@@ -62,6 +62,7 @@ function resetGame(){
 		if (guess.join("") === answer){
 			document.getElementById("win").innerHTML = ++wins;
       resetGame();
+			document.getElementById("revealLastAnswer").innerHTML = answer;
 		}
 
 		document.getElementById("word").innerHTML = guess.join(" ");
