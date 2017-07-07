@@ -51,10 +51,11 @@ function resetGame(){
 			guess = updatedGuess;
 		}
 
-		//a loss occurs	add 1 to losses and reset the game
+		//a loss occurs	add 1 to losses and reset the game and display answer
 		if (guessesLeft == 0){
 			document.getElementById("losses").innerHTML = ++losses;
       resetGame();
+			document.getElementById("revealLastAnswer").innerHTML = answer;
 			}
 
     //A win occurs add 1 to wins and reset the game
