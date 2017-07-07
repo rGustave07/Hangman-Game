@@ -1,7 +1,9 @@
 
 
 console.log("test");
-var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial"];
+var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial", "david","chris",
+"ritter","natalie", "albert", "brandi", "wayne", "carlos", "diane", "renee", "ivonne", "marco", "lana", "veronica",
+"adriana", "terry", "john", "alex", "saul", "carolina", "alejandra"];
 var guess = [];
 var answer = wordInventory[Math.floor(Math.random()*wordInventory.length)];
 var guessesLeft = 10;
@@ -17,7 +19,7 @@ function resetGame(){
   answer = "";
   guessHistory = [];
   guess = [];
-  answer = wordInventory[Math.floor(Math.random()*7)];
+  answer = wordInventory[Math.floor(Math.random()*wordInventory.length)];
   guessesLeft = 10;
   for ( i=0; i <= (answer.length -1); i++){
     guess.push("_");
