@@ -54,15 +54,15 @@ function resetGame(){
 		//a loss occurs	add 1 to losses and reset the game and display answer
 		if (guessesLeft == 0){
 			document.getElementById("losses").innerHTML = ++losses;
-      resetGame();
 			document.getElementById("revealLastAnswer").innerHTML = answer;
+      resetGame();
 			}
 
     //A win occurs add 1 to wins and reset the game
 		if (guess.join("") === answer){
 			document.getElementById("win").innerHTML = ++wins;
-      resetGame();
 			document.getElementById("revealLastAnswer").innerHTML = answer;
+      resetGame();
 		}
 
 		document.getElementById("word").innerHTML = guess.join(" ");
