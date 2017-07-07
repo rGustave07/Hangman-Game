@@ -29,7 +29,8 @@ body {
 #pickTracker,
 #guessTracker,
 #winsTracker,
-#lossTracker {
+#lossTracker,
+#answer {
   font-size: 10pt;
   font-family: 'Comfortaa', cursive;
   color: black;
