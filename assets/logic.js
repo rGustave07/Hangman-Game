@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<script src="assets/logic.js" text="text/javascript" charset="utf-8"></script>
-</head>
-<body>
-	<h1>Hangman game</h1>
-	<div id="wrapper">
-	<div id="gamediv"></div>
-	<div id="word"></div>
-	<p>Pick a letter on your keyboard and guess what the word is.</p>
-	<p>You've picked: <span id="guessholder">press a key to start!</span></p>
-	<p>Amount of guesses left: <span id="guessesLeft">10</span></p>
-	<p>Wins: <span id="win">0</span></p>
-	<p>Losses: <span id="losses">0</span></p>
-	</div>
 
 
-<!--<script type="text/javascript" src="assets/logic.js">
-/*var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial"];
+console.log("test");
+var wordInventory = ["yes", "no", "maybe", "sword", "wide", "genius", "celestial"];
 var guess = [];
 var answer = wordInventory[Math.floor(Math.random()*7)];
 var guessesLeft = 10;
@@ -86,8 +69,4 @@ for (var i=0; i <= (answer.length -1); i++ ){
 		document.getElementById("word").innerHTML = guess.join(" ");
 		document.getElementById("guessesLeft").innerHTML = guessesLeft;
 	});
-	document.getElementById("word").innerHTML = guess.join(" ");
-*/
-</script> -->
-</body>
-</html>
+	//document.getElementById("word").innerHTML = guess.join(" ");
